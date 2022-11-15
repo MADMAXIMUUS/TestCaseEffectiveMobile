@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mercury"
+    tools:context=".MainFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/location_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_location" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:fontFamily="@font/markpro"
+            android:text="@string/fake_address"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_open" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="@id/location_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/location_root" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/select_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/markpro_bold"
+        android:text="@string/select_category"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_root" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33sp"
+        android:text="@string/view_all"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/select_category_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/select_category_title" />
+
+    <HorizontalScrollView
+        android:id="@+id/rb_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_category_title">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="71dp"
+                android:layout_height="93dp"
+                android:button="@null"
+                android:drawableTop="@drawable/rb_phone_selector"
+                android:elevation="5dp"
+                android:fontFamily="@font/markpro_medium"
+                android:gravity="center"
+                android:text="@string/phones"
+                android:textColor="@color/rb_title_selector"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="23dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="71dp"
+                android:layout_height="93dp"
+                android:button="@null"
+                android:drawableTop="@drawable/rb_computer_selector"
+                android:elevation="5dp"
+                android:fontFamily="@font/markpro_medium"
+                android:gravity="center"
+                android:text="@string/computer"
+                android:textColor="@color/rb_title_selector"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="23dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="71dp"
+                android:layout_height="93dp"
+                android:button="@null"
+                android:drawableTop="@drawable/rb_health_selector"
+                android:elevation="5dp"
+                android:fontFamily="@font/markpro_medium"
+                android:gravity="center"
+                android:text="@string/health"
+                android:textColor="@color/rb_title_selector"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="23dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="71dp"
+                android:layout_height="93dp"
+                android:button="@null"
+                android:drawableTop="@drawable/rb_books_selector"
+                android:elevation="5dp"
+                android:fontFamily="@font/markpro_medium"
+                android:gravity="center"
+                android:text="@string/books"
+                android:textColor="@color/rb_title_selector"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="23dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="71dp"
+                android:layout_height="93dp"
+                android:button="@null"
+                android:drawableTop="@drawable/rb_tools_selector"
+                android:elevation="10dp"
+                android:fontFamily="@font/markpro_medium"
+                android:gravity="center"
+                android:text="@string/tools"
+                android:textColor="@color/rb_title_selector"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="23dp"
+                android:layout_height="20dp" />
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search_edt"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/search_background"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/markpro"
+        android:hint="@string/search"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/blue_50"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/qr_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rb_root" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/qr_button"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/circle_button_ripple_effect"
+        android:src="@drawable/ic_qr"
+        app:layout_constraintBottom_toBottomOf="@id/search_edt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_edt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/hot_sales_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/markpro_bold"
+        android:text="@string/hot_sales"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_edt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33sp"
+        android:text="@string/see_all"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/hot_sales_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hot_sales_title" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/hot_sales_pager"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hot_sales_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/best_seller_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/markpro_bold"
+        android:text="@string/best_seller"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hot_sales_pager" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33sp"
+        android:text="@string/see_all"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/best_seller_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/best_seller_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/best_seller_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/bottom_bar_background"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dot_icon"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintBottom_toBottomOf="@id/main_title"
+            app:layout_constraintEnd_toStartOf="@id/main_title"
+            app:layout_constraintTop_toTopOf="@id/main_title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="47dp"
+            android:fontFamily="@font/markpro_bold"
+            android:text="@string/explorer"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bottom_button_root"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/bottom_button_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="67dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cart" />
+
+            <View
+                android:layout_width="52dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite" />
+
+            <View
+                android:layout_width="52dp"
+                android:layout_height="20dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/ic_dot"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/markpro_medium"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/bottom_button_root"
+            app:layout_constraintTop_toTopOf="@id/bottom_button_root"
+            tools:text="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

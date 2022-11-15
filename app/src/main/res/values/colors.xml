@@ -11,4 +11,7 @@
     <color name="mercury">#FFF5F5F5</color>
     <color name="orange">#FFFF6E4E</color>
     <color name="blue">#FF010035</color>
+    <color name="blue_50">#7F010035</color>
+    <color name="grey">#FFB3B3B3</color>
+    <color name="light_gray">#FFDCDCDC</color>
 </resources>
