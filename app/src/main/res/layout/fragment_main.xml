@@ -208,7 +208,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/search_edt" />
 
-    <com.google.android.material.textview.MaterialTextView
+    <!--<com.google.android.material.textview.MaterialTextView
         android:id="@+id/hot_sales_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_edt" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33sp"
@@ -255,7 +255,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hot_sales_pager" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33sp"
@@ -264,14 +264,14 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@id/best_seller_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/best_seller_title" />
+        app:layout_constraintTop_toTopOf="@id/best_seller_title" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/best_seller_title" />
+        app:layout_constraintTop_toBottomOf="@id/search_edt" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -324,7 +324,7 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_favorite" />
+                android:src="@drawable/ic_favorite_big" />
 
             <View
                 android:layout_width="52dp"

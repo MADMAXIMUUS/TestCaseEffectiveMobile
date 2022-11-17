@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0fff"
+    tools:background="@color/blue">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/markpro_medium"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Galaxy Note 20 Ultra" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/markpro_medium"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="$3000.00" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/int_dec_button_root"
+        android:layout_width="26dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="33dp"
+        android:background="@drawable/cart_button_background"
+        android:backgroundTint="@color/deep_blue"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dec_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/markpro_medium"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/markpro_medium"
+            android:gravity="center_horizontal|bottom"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/int_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/markpro_medium"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/int_dec_button_root"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_note_root"
+    android:layout_width="match_parent"
+    android:layout_height="227dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/circle_button_ripple_effect"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_favorite"
+            android:tint="@color/orange"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/best_image"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/best_cost_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/markpro_bold"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/best_image"
+            tools:text="$1,047" />
+
+        <TextView
+            android:id="@+id/best_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/markpro_medium"
+            android:textColor="@color/lime_grey"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/best_cost_sale"
+            app:layout_constraintStart_toEndOf="@id/best_cost_sale"
+            tools:ignore="SmallSp"
+            tools:text="$1,500" />
+
+        <TextView
+            android:id="@+id/best_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/markpro"
+            android:textColor="@color/blue"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/best_cost_sale"
+            tools:ignore="SmallSp"
+            tools:text="Samsung Galaxy S20 Ultra" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
