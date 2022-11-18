@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mercury"
-    tools:context=".MainFragment">
+    tools:context=".featureExplorer.presentation.MainFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/location_root"
@@ -41,9 +41,11 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
+        android:layout_marginEnd="25dp"
+        android:padding="10dp"
         android:src="@drawable/ic_filter"
         app:layout_constraintBottom_toBottomOf="@id/location_root"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,6 +88,7 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checkedButton="@id/phone"
             android:orientation="horizontal">
 
             <View
@@ -93,6 +96,7 @@
                 android:layout_height="20dp" />
 
             <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/phone"
                 android:layout_width="71dp"
                 android:layout_height="93dp"
                 android:button="@null"
@@ -307,32 +311,36 @@
             android:id="@+id/bottom_button_root"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="67dp"
+            android:layout_marginEnd="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cart_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:src="@drawable/ic_cart" />
 
             <View
-                android:layout_width="52dp"
+                android:layout_width="32dp"
                 android:layout_height="20dp" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:src="@drawable/ic_favorite_big" />
 
             <View
-                android:layout_width="52dp"
+                android:layout_width="32dp"
                 android:layout_height="20dp" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:src="@drawable/ic_profile" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

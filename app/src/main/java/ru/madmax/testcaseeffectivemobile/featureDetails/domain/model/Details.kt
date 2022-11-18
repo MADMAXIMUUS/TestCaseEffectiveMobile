@@ -1,4 +1,4 @@
-package ru.madmax.testcaseeffectivemobile.model.details
+package ru.madmax.testcaseeffectivemobile.featureDetails.domain.model
 
 data class Details(
     val CPU: String,

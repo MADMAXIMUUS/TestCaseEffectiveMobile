@@ -4,10 +4,28 @@
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">#FFFF551F</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
         <item name="android:windowBackground">@color/mercury</item>
         <item name="android:statusBarColor">@color/mercury</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/blue</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
     </style>
 
 </resources>

@@ -1,4 +1,4 @@
-package ru.madmax.testcaseeffectivemobile.model.main
+package ru.madmax.testcaseeffectivemobile.featureExplorer.domain.model
 
 data class HomeStore(
     val id: Int,

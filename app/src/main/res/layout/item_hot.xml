@@ -45,7 +45,7 @@
             android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="hot_new"
+            app:layout_constraintTop_toBottomOf="@id/hot_new"
             tools:ignore="TextContrastCheck"
             tools:text="iPhone 12" />
 
@@ -70,6 +70,8 @@
             android:layout_marginStart="25dp"
             android:layout_marginBottom="34dp"
             android:fontFamily="@font/markpro_bold"
+            android:textColor="@color/blue"
+            android:backgroundTint="@color/white"
             android:insetTop="0dp"
             android:insetBottom="2dp"
             android:letterSpacing="0"

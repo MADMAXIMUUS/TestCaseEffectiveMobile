@@ -1,4 +1,4 @@
-package ru.madmax.testcaseeffectivemobile.model.cart
+package ru.madmax.testcaseeffectivemobile.featureCart.domain.model
 
 data class Basket(
     val id: Int,

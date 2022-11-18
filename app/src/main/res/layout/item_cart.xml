@@ -15,6 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -66,6 +67,7 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
