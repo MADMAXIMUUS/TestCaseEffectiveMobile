@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="182dp"
-    android:layout_margin="20dp">
+    tools:backgroundTint="@color/black"
+    app:cardCornerRadius="20dp"
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
             android:layout_height="match_parent"
             tools:ignore="ImageContrastCheck" />
 
@@ -73,7 +75,7 @@
             android:textColor="@color/blue"
             android:backgroundTint="@color/white"
             android:insetTop="0dp"
-            android:insetBottom="2dp"
+            android:insetBottom="0dp"
             android:letterSpacing="0"
             android:text="@string/buy_now"
             android:textAllCaps="false"

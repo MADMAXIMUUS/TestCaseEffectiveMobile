@@ -1,10 +1,10 @@
 package ru.madmax.testcaseeffectivemobile.featureExplorer.domain.model
 
 data class HomeStore(
-    val id: Int,
-    val is_buy: Boolean,
-    val is_new: Boolean,
-    val picture: String,
-    val subtitle: String,
-    val title: String
+    val id: Int = 0,
+    val is_buy: Boolean = false,
+    val is_new: Boolean = false,
+    val picture: String = "empty",
+    val subtitle: String = "",
+    val title: String = ""
 )

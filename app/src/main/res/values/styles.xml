@@ -5,4 +5,8 @@
         <item name="cornerSize">20%</item>
     </style>
 
+    <style name="Widget.App.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
 </resources>

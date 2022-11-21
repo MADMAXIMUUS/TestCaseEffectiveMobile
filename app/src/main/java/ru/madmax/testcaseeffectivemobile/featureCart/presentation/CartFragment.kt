@@ -17,7 +17,7 @@ import ru.madmax.testcaseeffectivemobile.databinding.FragmentCartBinding
 import ru.madmax.testcaseeffectivemobile.util.ListsItemDecoration
 
 @AndroidEntryPoint
-class CartFragment : Fragment() {
+class CartFragment : Fragment(), CartAdapter.OnItemClickedListener {
 
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
@@ -37,7 +37,7 @@ class CartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = CartAdapter()
+        val adapter = CartAdapter(this)
 
         binding.cartRv.apply {
             this.adapter = adapter
@@ -46,13 +46,13 @@ class CartFragment : Fragment() {
         }
 
         viewLifecycleOwner.lifecycleScope.launchWhenResumed {
-            cartViewModel.uiState.collectLatest { event ->
+            cartViewModel.uiState.collectLatest { cart ->
 
-                adapter.submitList(event.basket)
+                adapter.submitList(cart.basket)
 
                 binding.apply {
-                    totalValue.text = "$" + event.total.toString() + " us"
-                    deliveryValue.text = event.delivery
+                    totalValue.text = "$" + cart.total.toString() + " us"
+                    deliveryValue.text = cart.delivery
                     backButton.setOnClickListener {
                         view.findNavController().navigateUp()
                     }
@@ -64,6 +64,14 @@ class CartFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    override fun onPlusClick(position: Int) {
+        cartViewModel.updateAmount(position, 1)
+    }
+
+    override fun onMinusClick(position: Int) {
+        cartViewModel.updateAmount(position, -1)
     }
 
 }

@@ -6,24 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="227dp"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="10dp">
+    app:cardCornerRadius="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/back_button"
+            android:id="@+id/favorite_button"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/circle_button_ripple_effect"
             android:backgroundTint="@color/white"
+            android:elevation="10dp"
             android:src="@drawable/ic_favorite"
             android:tint="@color/orange"
-            android:elevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +30,7 @@
             android:id="@+id/best_image"
             android:layout_width="match_parent"
             android:layout_height="168dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -58,6 +58,7 @@
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@id/best_cost_sale"
             app:layout_constraintStart_toEndOf="@id/best_cost_sale"
+            app:layout_constraintTop_toTopOf="@id/best_cost_sale"
             tools:ignore="SmallSp"
             tools:text="$1,500" />
 
@@ -65,14 +66,15 @@
             android:id="@+id/best_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
+            android:layout_marginHorizontal="21dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/markpro"
             android:textColor="@color/blue"
-            android:textSize="10sp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/best_cost_sale"
-            tools:ignore="SmallSp"
             tools:text="Samsung Galaxy S20 Ultra" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

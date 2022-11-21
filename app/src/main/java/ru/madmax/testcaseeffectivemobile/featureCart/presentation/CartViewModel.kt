@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import ru.madmax.testcaseeffectivemobile.featureCart.domain.model.Basket
 import ru.madmax.testcaseeffectivemobile.featureCart.domain.model.Cart
 import ru.madmax.testcaseeffectivemobile.featureCart.domain.useCases.GetCartUseCase
 import javax.inject.Inject
@@ -37,6 +38,33 @@ class CartViewModel @Inject constructor(
                     )
                 }
             }
+        }
+    }
+
+    fun updateAmount(position: Int, addCount: Int) {
+        val newAmount = uiState.value.basket[position].amount + addCount
+        var total = 0
+        val list = mutableListOf<Basket>()
+        uiState.value.basket.forEachIndexed { index, basket ->
+            if (index == position) {
+                if (newAmount != 0) {
+                    list.add(
+                        basket.copy(
+                            amount = newAmount
+                        )
+                    )
+                    total += basket.price * newAmount
+                }
+            } else {
+                list.add(basket)
+                total += basket.price * basket.amount
+            }
+        }
+        _uiState.update { currentState ->
+            currentState.copy(
+                basket = list,
+                total = total
+            )
         }
     }
 

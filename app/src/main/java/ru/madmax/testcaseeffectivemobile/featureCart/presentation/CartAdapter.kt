@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import ru.madmax.testcaseeffectivemobile.databinding.ItemCartBinding
 import ru.madmax.testcaseeffectivemobile.featureCart.domain.model.Basket
 
-class CartAdapter : ListAdapter<Basket, CartAdapter.CartViewHolder>(DiffCallback()) {
+class CartAdapter(val listener: OnItemClickedListener) : ListAdapter<Basket, CartAdapter.CartViewHolder>(DiffCallback()) {
 
     inner class CartViewHolder(private val binding: ItemCartBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -20,8 +20,14 @@ class CartAdapter : ListAdapter<Basket, CartAdapter.CartViewHolder>(DiffCallback
             binding.apply {
                 title.text = basket.title
                 cost.text = "$${basket.price}"
-                amount.text = "1"
+                amount.text = basket.amount.toString()
                 Glide.with(binding.root).load(basket.images).into(image)
+                intButton.setOnClickListener {
+                    listener.onPlusClick(absoluteAdapterPosition)
+                }
+                decButton.setOnClickListener {
+                    listener.onMinusClick(absoluteAdapterPosition)
+                }
             }
         }
     }
@@ -43,5 +49,10 @@ class CartAdapter : ListAdapter<Basket, CartAdapter.CartViewHolder>(DiffCallback
 
         override fun areContentsTheSame(oldItem: Basket, newItem: Basket) =
             oldItem == newItem
+    }
+
+    interface OnItemClickedListener{
+        fun onPlusClick(position: Int)
+        fun onMinusClick(position: Int)
     }
 }

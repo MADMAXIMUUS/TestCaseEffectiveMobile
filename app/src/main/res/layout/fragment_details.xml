@@ -11,7 +11,7 @@
         android:layout_width="37dp"
         android:layout_height="37dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button_ripple_effect"
         android:src="@drawable/ic_back_arrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/fragment_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="27dp"
         android:fontFamily="@font/markpro_medium"
         android:text="@string/product_details"
         android:textColor="@color/blue"
@@ -34,7 +34,7 @@
         android:id="@+id/cart_button"
         android:layout_width="37dp"
         android:layout_height="37dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:background="@drawable/rounded_button_ripple_effect"
         android:backgroundTint="@color/orange"
@@ -46,9 +46,12 @@
         android:id="@+id/product_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="7dp"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"
+        android:layout_marginBottom="-40dp"
         app:layout_constraintBottom_toTopOf="@id/info_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back_button" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,7 +60,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_bar_background"
         android:backgroundTint="@color/white"
-        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.textview.MaterialTextView
@@ -90,7 +92,6 @@
             android:layout_width="wrap_content"
             android:layout_height="18dp"
             android:progressTint="@color/yellow"
-            android:rating="4.5"
             android:secondaryProgressTint="@color/white"
             app:layout_constraintStart_toStartOf="@id/device_title"
             app:layout_constraintTop_toBottomOf="@id/device_title" />
@@ -102,6 +103,7 @@
             android:layout_marginHorizontal="27dp"
             android:layout_marginTop="32dp"
             app:layout_constraintTop_toBottomOf="@id/rating_root"
+            app:tabBackground="@color/white"
             app:tabSelectedTextColor="@color/blue"
             app:tabTextColor="@color/black_50">
 
@@ -262,8 +264,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/spec_root" />
 
-        <RadioGroup
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/color_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            android:checkedButton="@id/color_1"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color_and_capacity_title">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color_1_back"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_marginEnd="18dp"
+                android:src="@drawable/ic_dot" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color_2_back"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:src="@drawable/ic_dot" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RadioGroup
+            android:id="@+id/color_check_root"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
@@ -330,11 +359,12 @@
         </RadioGroup>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/buy_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="27dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="20dp"
             app:cardBackgroundColor="@color/orange"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"

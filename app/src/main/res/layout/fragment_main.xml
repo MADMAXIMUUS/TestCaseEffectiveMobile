@@ -212,68 +212,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/search_edt" />
 
-    <!--<com.google.android.material.textview.MaterialTextView
-        android:id="@+id/hot_sales_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/markpro_bold"
-        android:text="@string/hot_sales"
-        android:textColor="@color/blue"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_edt" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="33sp"
-        android:text="@string/see_all"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@id/hot_sales_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/hot_sales_title" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/hot_sales_pager"
-        android:layout_width="match_parent"
-        android:layout_height="182dp"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hot_sales_title" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/best_seller_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/markpro_bold"
-        android:text="@string/best_seller"
-        android:textColor="@color/blue"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hot_sales_pager" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="33sp"
-        android:text="@string/see_all"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@id/best_seller_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/best_seller_title" />-->
-
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_edt" />
 
@@ -346,10 +289,10 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
+            android:id="@+id/badge"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="-10dp"
+            android:layout_marginStart="20dp"
             android:background="@drawable/ic_dot"
             android:backgroundTint="@android:color/holo_red_light"
             android:fontFamily="@font/markpro_medium"
@@ -357,6 +300,7 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintStart_toStartOf="@id/bottom_button_root"
             app:layout_constraintTop_toTopOf="@id/bottom_button_root"
             tools:text="1" />

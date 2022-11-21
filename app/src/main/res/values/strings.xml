@@ -34,4 +34,24 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="_4_5_to_5_5_inches">4.5 to 5.5 inches</string>
+
+    <string-array name="brands">
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+        <item>Apple</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>#0 - $999</item>
+        <item>#1000 - $1999</item>
+        <item>#2000 - $2999</item>
+        <item>#3000 - $3999</item>
+        <item>#4000 - $4999</item>
+        <item>#5000 - $5999</item>
+        <item>#6000 - $6999</item>
+        <item>#7000 - $7999</item>
+        <item>#8000 - $8999</item>
+        <item>#9000 - $10000</item>
+    </string-array>
+
 </resources>
